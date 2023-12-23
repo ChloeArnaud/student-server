@@ -9,8 +9,13 @@ import java.util.List;
 
 @Service
 public class StudentService {
+    public StudentRepository getStudentRepository() {
+        return studentRepository;
+    }
+
     @Autowired
     StudentRepository studentRepository;
+
 
     public List<Student> findAll() { return studentRepository.findAll();}
 }
